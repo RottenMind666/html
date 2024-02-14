@@ -1,69 +1,53 @@
 {
-    "workflowApiVersion": "1.1",
-    "metaData": {
-        "icon": "images/icon.png",
-        "iconSmall": "images/iconSmall.png",
-        "category": "message"
-    },
-    "type": "REST",
-    "lang": {
-        "en-US": {
-            "name": "XccTestApp",
-          "description": "A Template for a custom Journey Builder activity",
-          "step1Label": "Configure Activity"
-        }
-    },
-    "arguments": {
-        "execute": {
-           "inArguments":[],
+  "workflowApiVersion": "1.1",
+  "metaData": {
+      "icon": "images/icon.jpeg",
+      "category": "custom"
+  },
+  "type": "REST",
+  "lang": {
+      "en-US": {
+          "name": "XccTestApp",
+          "description": "XccTestAppXccTestAppXccTestAppXccTestAppXccTestAppXccTestAppXccTestAppXccTestAppXccTestAppXccTestAppXccTestAppXccTestAppXccTestAppXccTestAppXccTestApp"
+      }
+  },
+  "arguments": {
+      "execute": {
+          "inArguments": [],
           "outArguments": [],
-          "url": "https://mcslcv42qhfcyrj6snc3y3zvm-c4.rest.marketingcloudapis.com/execute",
-           "verb": "POST",
-            "body": "",
-            "header": "",
-            "format": "json",
-            "useJwt": true,
-            "timeout": 10000
-        }
-    },
-    "configurationArguments": {
+          "timeout": 10000,
+          "retry": 3,
+          "url": "https://xcctestbetway-3e5cd86a1512.herokuapp.com/execute",
+          "body": "",
+          "header": "",
+          "useJwt": true
+      }
+  },
+  "configurationArguments": {
       "save": {
-        "url": "https://mcslcv42qhfcyrj6snc3y3zvm-c4.rest.marketingcloudapis.com/save",
-          "verb": "POST",
-        "useJwt": true
-       },
-       "publish": {
-        "url": "https://mcslcv42qhfcyrj6snc3y3zvm-c4.rest.marketingcloudapis.com/publish",
-           "verb": "POST",
-        "useJwt": true
-       },
-      "stop": {
-        "url": "https://mcslcv42qhfcyrj6snc3y3zvm-c4.rest.marketingcloudapis.com/stop",
-           "verb": "POST",
-        "useJwt": true
+          "url": "https://xcctestbetway-3e5cd86a1512.herokuapp.com/save",
+          "body": "",
+          "header": "",
+          "useJwt": true
+      },
+      "publish": {
+          "url": "https://xcctestbetway-3e5cd86a1512.herokuapp.com/publish",
+          "body": "",
+          "header": "",
+          "useJwt": true
       },
       "validate": {
-        "url": "https://mcslcv42qhfcyrj6snc3y3zvm-c4.rest.marketingcloudapis.com/validate",
-        "verb": "POST",
-        "useJwt": true
+          "url": "https://xcctestbetway-3e5cd86a1512.herokuapp.com/validate",
+          "body": "",
+          "header": "",
+          "useJwt": true
       }
-    },
-    "wizardSteps": [
-        { "label": "Configure Activity", "key": "step1" }
-    ],
-    "userInterfaces": {
-        "configModal": {
-            "height": 400,
-            "width": 1000,
-          "fullscreen": false
-        }
-    },
-    "schema": {
-        "arguments": {
-            "execute": {
-                "inArguments": [],
-                "outArguments": []
-            }
-        }
-    }
+  },
+  "userInterfaces": {
+      "configModal": {
+          "height": 200,
+          "width": 500,
+          "fullscreen": true
+      }
+  }
 }
