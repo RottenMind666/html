@@ -1,0 +1,19 @@
+version: "3"
+services:
+  node:
+    image: nodejsprova:latest
+    user: "node"
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./:/home/node/app
+      - /home/node/app/node_modules
+    networks:
+      - default_net
+    ports:
+      - 8080:8080
+      
+networks:
+  default_net:
+    driver: bridge
