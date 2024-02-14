@@ -1,53 +1,69 @@
 {
-  "workflowApiVersion": "1.1",
-  "metaData": {
-      "icon": "images/icon.jpeg",
-      "category": "custom"
-  },
-  "type": "REST",
-  "lang": {
-      "en-US": {
-          "name": "XccTestApp",
-          "description": "Test"
-      }
-  },
-  "arguments": {
-      "execute": {
-          "inArguments": [],
+    "workflowApiVersion": "1.1",
+    "metaData": {
+        "icon": "images/icon.png",
+        "iconSmall": "images/iconSmall.png",
+        "category": "message"
+    },
+    "type": "REST",
+    "lang": {
+        "en-US": {
+            "name": "XccTestApp",
+          "description": "A Template for a custom Journey Builder activity",
+          "step1Label": "Configure Activity"
+        }
+    },
+    "arguments": {
+        "execute": {
+           "inArguments":[],
           "outArguments": [],
-          "timeout": 10000,
-          "retry": 3,
-          "url": "https://xcctestbetway-3e5cd86a1512.herokuapp.com/execute",
-          "body": "",
-          "header": "",
-          "useJwt": true
-      }
-  },
-  "configurationArguments": {
+          "url": "https://xcctestbetway-3e5cd86a1512.herokuapp.com/journeybuilder/execute",
+           "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json",
+            "useJwt": true,
+            "timeout": 10000
+        }
+    },
+    "configurationArguments": {
       "save": {
-          "url": "https://xcctestbetway-3e5cd86a1512.herokuapp.com/save",
-          "body": "",
-          "header": "",
-          "useJwt": true
-      },
-      "publish": {
-          "url": "https://xcctestbetway-3e5cd86a1512.herokuapp.com/publish",
-          "body": "",
-          "header": "",
-          "useJwt": true
+        "url": "https://xcctestbetway-3e5cd86a1512.herokuapp.com/journeybuilder/save",
+          "verb": "POST",
+        "useJwt": true
+       },
+       "publish": {
+        "url": "https://xcctestbetway-3e5cd86a1512.herokuapp.com/journeybuilder/publish",
+           "verb": "POST",
+        "useJwt": true
+       },
+      "stop": {
+        "url": "https://xcctestbetway-3e5cd86a1512.herokuapp.com/journeybuilder/stop",
+           "verb": "POST",
+        "useJwt": true
       },
       "validate": {
-          "url": "https://xcctestbetway-3e5cd86a1512.herokuapp.com/validate",
-          "body": "",
-          "header": "",
-          "useJwt": true
+        "url": "https://xcctestbetway-3e5cd86a1512.herokuapp.com/journeybuilder/validate",
+        "verb": "POST",
+        "useJwt": true
       }
-  },
-  "userInterfaces": {
-      "configModal": {
-          "height": 200,
-          "width": 500,
-          "fullscreen": true
-      }
-  }
+    },
+    "wizardSteps": [
+        { "label": "Configure Activity", "key": "step1" }
+    ],
+    "userInterfaces": {
+        "configModal": {
+            "height": 400,
+            "width": 1000,
+          "fullscreen": false
+        }
+    },
+    "schema": {
+        "arguments": {
+            "execute": {
+                "inArguments": [],
+                "outArguments": []
+            }
+        }
+    }
 }
