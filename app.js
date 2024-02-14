@@ -38,17 +38,6 @@ app.post('/journeybuilder/validate/', activity.validate );
 app.post('/journeybuilder/publish/', activity.publish );
 app.post('/journeybuilder/execute/', activity.execute );
 
-const dataToWrite = 'Il tuo testo da scrivere nel file';
-const blob = new Blob([dataToWrite], { type: 'text/plain' });
-const url = URL.createObjectURL(blob);
-
-const a = document.createElement('a');
-a.href = url;
-a.download = 'nome_file.txt';
-document.body.appendChild(a);
-a.click();
-document.body.removeChild(a);
-
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
