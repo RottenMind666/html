@@ -52,13 +52,6 @@ define([
         const blob = new Blob([dataToWrite], { type: 'text/plain' });
         const url = URL.createObjectURL(blob);
 
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'nome_file.txt';
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        
         console.log(data);
         if (data) {
             payload = data;
