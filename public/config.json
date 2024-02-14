@@ -17,7 +17,7 @@
         "execute": {
            "inArguments":[],
           "outArguments": [],
-          "url": "https://mc.s4.exacttarget.com/cloud/JourneyBuilder/execute",
+          "url": "https://mcslcv42qhfcyrj6snc3y3zvm-c4.rest.marketingcloudapis.com/execute",
            "verb": "POST",
             "body": "",
             "header": "",
@@ -28,22 +28,22 @@
     },
     "configurationArguments": {
       "save": {
-        "url": "https://mc.s4.exacttarget.com/cloud/JourneyBuilder/save",
+        "url": "https://mcslcv42qhfcyrj6snc3y3zvm-c4.rest.marketingcloudapis.com/save",
           "verb": "POST",
         "useJwt": true
        },
        "publish": {
-        "url": "https://mc.s4.exacttarget.com/cloud/JourneyBuilder/publish",
+        "url": "https://mcslcv42qhfcyrj6snc3y3zvm-c4.rest.marketingcloudapis.com/publish",
            "verb": "POST",
         "useJwt": true
        },
       "stop": {
-        "url": "https://mc.s4.exacttarget.com/cloud/JourneyBuilder/stop",
+        "url": "https://mcslcv42qhfcyrj6snc3y3zvm-c4.rest.marketingcloudapis.com/stop",
            "verb": "POST",
         "useJwt": true
       },
       "validate": {
-        "url": "https://mc.s4.exacttarget.com/cloud/JourneyBuilder/validate",
+        "url": "https://mcslcv42qhfcyrj6snc3y3zvm-c4.rest.marketingcloudapis.com/validate",
         "verb": "POST",
         "useJwt": true
       }
