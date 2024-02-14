@@ -17,7 +17,7 @@
         "execute": {
            "inArguments":[],
           "outArguments": [],
-          "url": "https://mc.s4.exacttarget.com/cloud/#app/JourneyBuilder/execute",
+          "url": "https://mc.s4.exacttarget.com/cloud/JourneyBuilder/execute",
            "verb": "POST",
             "body": "",
             "header": "",
@@ -28,22 +28,22 @@
     },
     "configurationArguments": {
       "save": {
-        "url": "https://mc.s4.exacttarget.com/cloud/#app/JourneyBuilder/save",
+        "url": "https://mc.s4.exacttarget.com/cloud/JourneyBuilder/save",
           "verb": "POST",
         "useJwt": true
        },
        "publish": {
-        "url": "https://mc.s4.exacttarget.com/cloud/#app/JourneyBuilder/publish",
+        "url": "https://mc.s4.exacttarget.com/cloud/JourneyBuilder/publish",
            "verb": "POST",
         "useJwt": true
        },
       "stop": {
-        "url": "https://mc.s4.exacttarget.com/cloud/#app/JourneyBuilder/stop",
+        "url": "https://mc.s4.exacttarget.com/cloud/JourneyBuilder/stop",
            "verb": "POST",
         "useJwt": true
       },
       "validate": {
-        "url": "https://mc.s4.exacttarget.com/cloud/#app/JourneyBuilder/validate",
+        "url": "https://mc.s4.exacttarget.com/cloud/JourneyBuilder/validate",
         "verb": "POST",
         "useJwt": true
       }
