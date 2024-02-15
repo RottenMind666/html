@@ -6,11 +6,13 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="vendor/salesforce-lightning-design-system/styles/salesforce-lightning-design-system.css">
+    <link rel="stylesheet"
+        href="vendor/salesforce-lightning-design-system/styles/salesforce-lightning-design-system.css">
     <link rel="stylesheet" href="css/styles.css">
     <script type="text/javascript" src="//code.jquery.com/git/jquery-git.min.js"></script>
     <script type="text/javascript" src="js/require.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script type="text/javascript">
         (function () {
             var config = {
@@ -22,6 +24,15 @@
             ];
 
             require(config, dependencies);
+
+            //GETENV
+            require('dotenv').config();
+            const grant_type = process.env.GRANT_TYPE;
+            const client_id = process.env.CLIENT_ID;
+            const client_secret = process.env.CLIENT_SECRET;
+            const account_id = process.env.ACCOUNT_ID;
+            console.log(grant_type, client_id, client_secret, account_id);
+            //GETENV
         })();
 
     </script>
@@ -32,11 +43,11 @@
         <div class="slds-grid">
 
             <main class="slds-col slds-size--1-of-3 slds-p-horizontal--small">
-              <h1>Welcome to your activity!</h1>
+                <h1>Welcome to your activity!</h1>
 
             </main>
-           
-            
+
+
 
         </div>
 
