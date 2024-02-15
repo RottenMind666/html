@@ -20,13 +20,13 @@
             };
 
             var dependencies = [
-                'customActivity'
+                'customActivity',
+                'dotenv'
             ];
 
             require(config, dependencies);
 
             //GETENV
-            require('dotenv').config();
             const grant_type = process.env.GRANT_TYPE;
             const client_id = process.env.CLIENT_ID;
             const client_secret = process.env.CLIENT_SECRET;
