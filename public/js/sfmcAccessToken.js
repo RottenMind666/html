@@ -1,7 +1,7 @@
 // Configura require.js con il percorso di Axios
 require.config({
   paths: {
-    axios: '../../node_modules/axios/dist/axios.min'
+    axios: '../vendor/axios/dist/axios.min'
   }
 });
 
