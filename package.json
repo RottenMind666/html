@@ -37,7 +37,6 @@
     "require": "^2.4.20",
     "soap": "^0.37.0",
     "xml2js": "^0.4.23",
-    "dotenv": "^10.0.0"
   },
   "devDependencies": {
     "gulp": "^4.0.2"
