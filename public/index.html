@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title></title>
+    <title>Your Page Title</title>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="vendor/salesforce-lightning-design-system/styles/salesforce-lightning-design-system.css">
     <link rel="stylesheet" href="css/styles.css">
-    <script type="text/javascript" src="//code.jquery.com/git/jquery-git.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script href="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+    <!-- Remove the duplicate jQuery script and use the minified version directly -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <!-- Correct the 'href' attribute to 'src' for the require.js script -->
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
     <script type="text/javascript">
         (function () {
             var config = {
@@ -21,7 +22,9 @@
                 'customActivity'
             ];
 
-            require(config, dependencies);
+            // Use requirejs to load the dependencies
+            require.config(config);
+            require(dependencies);
         })();
     </script>
 </head>
@@ -29,13 +32,10 @@
 <body>
     <div id="step1" class="step">
         <div class="slds-grid">
-
             <main class="slds-col slds-size--1-of-3 slds-p-horizontal--small">
                 <h1>Welcome to your activity!</h1>
             </main>
-
         </div>
-
     </div>
 </body>
 
